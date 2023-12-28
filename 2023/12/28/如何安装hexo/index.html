@@ -24,7 +24,7 @@
 <meta property="og:description" content="一、前置环境安装1、已经安装好nodejs(包括包管理工具npm、cnpm)、git（以上ubuntu系统下，均可以通过二进制apt-get安装）附nodejs安装教程：先安装nodejs的管理工具： 1npm install n -g  相关参数指令（全局操作需要加上sudo）：    指令含义 指令    安装最新长期支持版node n lts   版本检查 node -v   安装指定版本">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-28T08:31:01.000Z">
-<meta property="article:modified_time" content="2023-12-28T08:52:15.703Z">
+<meta property="article:modified_time" content="2023-12-28T08:59:09.751Z">
 <meta property="article:author" content="蔡阳">
 <meta property="article:tag" content="一切的开始">
 <meta name="twitter:card" content="summary_large_image">
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          431 字
+          440 字
         
       </span>
     
@@ -311,7 +311,7 @@
               <div class="markdown-body">
                 
                 <h1 id="一、前置环境安装"><a href="#一、前置环境安装" class="headerlink" title="一、前置环境安装"></a>一、前置环境安装</h1><h2 id="1、已经安装好nodejs-包括包管理工具npm、cnpm-、git（以上ubuntu系统下，均可以通过二进制apt-get安装）"><a href="#1、已经安装好nodejs-包括包管理工具npm、cnpm-、git（以上ubuntu系统下，均可以通过二进制apt-get安装）" class="headerlink" title="1、已经安装好nodejs(包括包管理工具npm、cnpm)、git（以上ubuntu系统下，均可以通过二进制apt-get安装）"></a>1、已经安装好<strong>nodejs</strong>(包括包管理工具<strong>npm</strong>、<strong>cnpm</strong>)、<strong>git</strong>（以上ubuntu系统下，均可以通过二进制apt-get安装）</h2><h2 id="附nodejs安装教程："><a href="#附nodejs安装教程：" class="headerlink" title="附nodejs安装教程："></a>附nodejs安装教程：</h2><p>先安装nodejs的管理工具：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span> n -g<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install n -g<br></code></pre></td></tr></table></figure>
 
 <p>相关参数指令（全局操作需要加上sudo）：</p>
 <table>
@@ -350,7 +350,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="2、接着准备安装hexo脚架环境："><a href="#2、接着准备安装hexo脚架环境：" class="headerlink" title="2、接着准备安装hexo脚架环境："></a>2、接着准备安装hexo脚架环境：</h2><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">sudo cnpm install -g hexo-<span class="hljs-symbol">cli@</span>版本号<br></code></pre></td></tr></table></figure>
+<h2 id="2、接着准备安装hexo脚架环境："><a href="#2、接着准备安装hexo脚架环境：" class="headerlink" title="2、接着准备安装hexo脚架环境："></a>2、接着准备安装hexo脚架环境：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo cnpm install -g hexo-cli@版本号<br></code></pre></td></tr></table></figure>
 
 
 
@@ -358,10 +358,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span>		build<br><span class="hljs-built_in">cd</span>				build<br>hexo		 init<br></code></pre></td></tr></table></figure>
 
 <p>如果遇到无法安装依赖的问题，输入：	</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">rm -rf node_modules <span class="hljs-meta">&amp;&amp; npm install --force	</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf node_modules &amp;&amp; npm install --force	<br></code></pre></td></tr></table></figure>
 
 <p>​		</p>
-<h1 id="三、本地部署（不想要本地部署，可跳过）"><a href="#三、本地部署（不想要本地部署，可跳过）" class="headerlink" title="三、本地部署（不想要本地部署，可跳过）"></a>三、本地部署（不想要本地部署，可跳过）</h1><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> g		<span class="hljs-comment">#静态生成文件</span><br>hexo s		<span class="hljs-comment">#启动</span><br><span class="hljs-comment">#如果遇到4000端口被占用情况，输入：</span><br>hexo 	s 	-p 		端口号<br></code></pre></td></tr></table></figure>
+<h1 id="三、本地部署（不想要本地部署，可跳过）"><a href="#三、本地部署（不想要本地部署，可跳过）" class="headerlink" title="三、本地部署（不想要本地部署，可跳过）"></a>三、本地部署（不想要本地部署，可跳过）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g		<span class="hljs-comment">#静态生成文件</span><br>hexo s		<span class="hljs-comment">#启动</span><br><span class="hljs-comment">#如果遇到4000端口被占用情况，输入：</span><br>hexo 	s 	-p 		端口号<br></code></pre></td></tr></table></figure>
 
 
 
@@ -374,19 +374,22 @@
 
 
 <p>2、接着输入：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">cnpm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cnpm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="生成静态文件和远程部署（后续更新修改，都是这三步）"><a href="#生成静态文件和远程部署（后续更新修改，都是这三步）" class="headerlink" title="生成静态文件和远程部署（后续更新修改，都是这三步）"></a>生成静态文件和远程部署（后续更新修改，都是这三步）</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo	clean</span><br><span class="hljs-attribute">hexo	g</span><br><span class="hljs-attribute">hexo	d</span><br></code></pre></td></tr></table></figure>
+<h2 id="生成静态文件和远程部署（后续更新修改，都是这三步）"><a href="#生成静态文件和远程部署（后续更新修改，都是这三步）" class="headerlink" title="生成静态文件和远程部署（后续更新修改，都是这三步）"></a>生成静态文件和远程部署（后续更新修改，都是这三步）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo	clean<br>hexo	g<br>hexo	d<br></code></pre></td></tr></table></figure>
 
-<h2 id="访问和绑定域名"><a href="#访问和绑定域名" class="headerlink" title="访问和绑定域名"></a>访问和绑定域名</h2><p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103813944">https://zhuanlan.zhihu.com/p/103813944</a><br>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105584373">https://zhuanlan.zhihu.com/p/105584373</a></p>
+<h2 id="访问和绑定域名"><a href="#访问和绑定域名" class="headerlink" title="访问和绑定域名"></a>访问和绑定域名</h2><p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103813944">https://zhuanlan.zhihu.com/p/103813944</a></p>
 <h1 id="五、后续环节"><a href="#五、后续环节" class="headerlink" title="五、后续环节"></a>五、后续环节</h1><p>相关markdown编辑器下载，<br>linux：	</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">wget https://<span class="hljs-keyword">file</span>.babudiu.<span class="hljs-keyword">com</span>/<span class="hljs-keyword">f</span>/yXCL/Typora_Linux_0.<span class="hljs-number">11.18</span>_amd64.<span class="hljs-keyword">deb</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://file.babudiu.com/f/yXCL/Typora_Linux_0.11.18_amd64.deb<br></code></pre></td></tr></table></figure>
 
 <p>windows：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
+
+
+<p>设置和优化相关主题参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105584373">https://zhuanlan.zhihu.com/p/105584373</a></p>
 
                 
               </div>
