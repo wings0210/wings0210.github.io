@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>如何开始第一篇博客</title>
+    <link href="/2023/12/28/%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2023/12/28/%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、你的第一步"><a href="#一、你的第一步" class="headerlink" title="一、你的第一步"></a>一、你的第一步</h1><p>在博客根目录，命令行输入：</p><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo<span class="hljs-keyword">new</span><span class="hljs-type"></span><span class="hljs-string">&quot;文章title&quot;</span><br></code></pre></td></tr></table></figure><table><thead><tr><th>配置项</th><th>含义</th></tr></thead><tbody><tr><td>date</td><td>文章创建日期</td></tr><tr><td>title</td><td>网页文章标题</td></tr><tr><td>comments</td><td>文章评论功能是否启动</td></tr><tr><td>tags</td><td>文章标签</td></tr><tr><td>categories</td><td>文章分类</td></tr><tr><td>keywords</td><td>文章关键字</td></tr></tbody></table><p>接下来使用markdown工具编辑生成的md文件吧</p><h1 id="二、部署和提交"><a href="#二、部署和提交" class="headerlink" title="二、部署和提交"></a>二、部署和提交</h1><p>1、清除静态文件</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo clean</span><br></code></pre></td></tr></table></figure><p>2、生成静态文件</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br></code></pre></td></tr></table></figure><p>3、本地部署启动（前者）或者远程部署（后者）</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo s -<span class="hljs-selector-tag">p</span> 端口号<br></code></pre></td></tr></table></figure><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂杂念</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>一切的开始</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/12/26/hello-world/"/>
     <url>/2023/12/26/hello-world/</url>
