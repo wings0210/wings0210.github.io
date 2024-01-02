@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Golang交叉编译相关</title>
+    <link href="/2024/01/02/Golang%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3/"/>
+    <url>/2024/01/02/Golang%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%9B%B8%E5%85%B3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、跨平台交叉编译相关指令"><a href="#一、跨平台交叉编译相关指令" class="headerlink" title="一、跨平台交叉编译相关指令"></a>一、跨平台交叉编译相关指令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">CGO_ENABLED=0 <br>GOOS=linux <br>GOARCH=amd64 <br>go build main.go<br></code></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>说明</th><th>case</th></tr></thead><tbody><tr><td>CGO_ENABLED</td><td>用于标识（声明） cgo 工具是否可用，存在交叉编译的情况时，cgo 工具是不可用的</td><td>交叉编译时，置0</td></tr><tr><td>GOOS</td><td>用于标识（声明）程序构建环境的目标操作系统</td><td>linux、windows、darwin</td></tr><tr><td>GOARCH</td><td>用于标识（声明）程序构建环境的目标计算架构</td><td>附表</td></tr><tr><td>go build</td><td>构建指令（常用：go build -o 索引目录 源文件）</td><td>-a：强制重新编译<br />-o：输出可执行文件路径</td></tr></tbody></table><p>附表：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>386</td><td>统一代表32位指令集系统</td></tr><tr><td>amd64</td><td>CISC指令集下的x86架构64位系统</td></tr><tr><td>arm</td><td>RISC指令集下的arm架构64位系统</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>Golang入门与精通</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Golang相关</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何安装hexo</title>
     <link href="/2023/12/28/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85hexo/"/>
     <url>/2023/12/28/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85hexo/</url>
