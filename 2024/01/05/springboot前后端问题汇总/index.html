@@ -16,16 +16,17 @@
   <meta name="author" content="蔡阳">
   <meta name="keywords" content="">
   
-    <meta name="description" content="长风破浪会有时">
+    <meta name="description" content="一、Springboot后端问题汇总1、导入开源项目步骤 1）每个项目单独配置 maven的仓库conf 和 本地仓库的地址 2）每个项目单独配置项目结构下的jdk 2、maven的依赖配置文件pom.xml中 的 project头文件 报红问题 解决方案： 在	设置-&gt;架构和DTD-&gt;忽略的模式和DTD	下： 新增：http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot前后端问题汇总">
 <meta property="og:url" content="http://example.com/2024/01/05/springboot%E5%89%8D%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="小蔡的天际线">
-<meta property="og:description" content="长风破浪会有时">
+<meta property="og:description" content="一、Springboot后端问题汇总1、导入开源项目步骤 1）每个项目单独配置 maven的仓库conf 和 本地仓库的地址 2）每个项目单独配置项目结构下的jdk 2、maven的依赖配置文件pom.xml中 的 project头文件 报红问题 解决方案： 在	设置-&gt;架构和DTD-&gt;忽略的模式和DTD	下： 新增：http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-05T05:36:29.000Z">
-<meta property="article:modified_time" content="2024-01-05T05:36:29.029Z">
+<meta property="article:modified_time" content="2024-01-05T05:38:03.260Z">
 <meta property="article:author" content="蔡阳">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -248,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          161 字
         
       </span>
     
@@ -259,7 +260,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -309,7 +310,24 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="一、Springboot后端问题汇总"><a href="#一、Springboot后端问题汇总" class="headerlink" title="一、Springboot后端问题汇总"></a>一、Springboot后端问题汇总</h1><p>1、导入开源项目步骤</p>
+<p><em>1）</em>每个项目单独配置 <strong>maven的仓库conf</strong> 和 <strong>本地仓库的地址</strong></p>
+<p><em>2）</em>每个项目单独配置项目结构下的jdk</p>
+<p>2、maven的依赖配置文件<strong>pom.xml</strong>中 的 <strong>project头文件</strong> 报红问题</p>
+<p>解决方案：</p>
+<p>在	设置-&gt;架构和DTD-&gt;忽略的模式和DTD	下：</p>
+<p>新增：<a target="_blank" rel="noopener" href="http://maven.apache.org/POM/4.0.0">http://maven.apache.org/POM/4.0.0</a></p>
+<h2 id="二、VUE前端项目启动部署步骤"><a href="#二、VUE前端项目启动部署步骤" class="headerlink" title="二、VUE前端项目启动部署步骤"></a>二、VUE前端项目启动部署步骤</h2><p>1、进入项目所在文件夹，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --registry=https://registry.npmmirror.com<br></code></pre></td></tr></table></figure>
+
+<p>如果已经通过npm&#x2F;cnpm 安装过节点，先删除出错的node_modules</p>
+<p>2、接着执行启动命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run dev<br></code></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run serve<br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
@@ -317,6 +335,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="category-chain-item">SpringBoot前后端问题汇总</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Spring/" class="print-no-link">#Spring</a>
+      
+    </div>
   
 </div>
 
