@@ -24,7 +24,7 @@
 <meta property="og:description" content="一、概述SQL关键字分为普通关键字和DDL（数据定义语言） 二、DDL关键字在SQL语言中，DDL（数据定义语言）关键字的顺序通常是以下方式：  CREATE：用于创建数据库对象，如表、视图、索引等。  ALTER：用于修改数据库对象的结构，如添加、修改或删除列、约束等。  DROP：用于删除数据库对象，如表、视图、索引等。  TRUNCATE：用于截断表，即删除表中的所有数据。  RENAME：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-10T03:19:47.000Z">
-<meta property="article:modified_time" content="2024-01-10T03:41:37.687Z">
+<meta property="article:modified_time" content="2024-01-10T06:10:19.317Z">
 <meta property="article:author" content="蔡阳">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary_large_image">
@@ -249,7 +249,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          521 字
+          762 字
         
       </span>
     
@@ -260,7 +260,7 @@
         
         
         
-          5 分钟
+          7 分钟
         
       </span>
     
@@ -409,6 +409,117 @@
 
 
 
+<h1 id="四、一些小细节"><a href="#四、一些小细节" class="headerlink" title="四、一些小细节"></a>四、一些小细节</h1><h2 id="1）左联和右联区别"><a href="#1）左联和右联区别" class="headerlink" title="1）左联和右联区别"></a>1）左联和右联区别</h2><p>左联：以左表为主表，即以左表的字段为键，来扩充交叉得新表</p>
+<p>右联：以右表为主表，即以右表的字段为键，来扩充交叉得新表</p>
+<h2 id="2）具体例子说明"><a href="#2）具体例子说明" class="headerlink" title="2）具体例子说明"></a>2）具体例子说明</h2><p>假设我们有以下数据：</p>
+<p>Customers 表：</p>
+<table>
+<thead>
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>John</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mary</td>
+</tr>
+<tr>
+<td>3</td>
+<td>David</td>
+</tr>
+</tbody></table>
+<p>Orders 表：</p>
+<table>
+<thead>
+<tr>
+<th>OrderID</th>
+<th>CustomerID</th>
+<th>OrderDate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>101</td>
+<td>1</td>
+<td>2022-01-01</td>
+</tr>
+<tr>
+<td>102</td>
+<td>2</td>
+<td>2022-02-01</td>
+</tr>
+<tr>
+<td>103</td>
+<td>2</td>
+<td>2022-03-01</td>
+</tr>
+<tr>
+<td>104</td>
+<td>4</td>
+<td>2022-04-01</td>
+</tr>
+</tbody></table>
+<p>使用左联接（LEFT JOIN）的示例查询语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Customers.CustomerName, Orders.OrderID<br><span class="hljs-keyword">FROM</span> Customers<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> Orders <span class="hljs-keyword">ON</span> Customers.CustomerID <span class="hljs-operator">=</span> Orders.CustomerID;<br></code></pre></td></tr></table></figure>
+
+<p>执行上述查询语句后，将返回以下结果：</p>
+<table>
+<thead>
+<tr>
+<th>CustomerName</th>
+<th>OrderID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>John</td>
+<td>101</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>102</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>103</td>
+</tr>
+<tr>
+<td>David</td>
+<td>NULL</td>
+</tr>
+</tbody></table>
+<p>​        在这个结果中，我们可以看到左表 “Customers” 中的所有行都被返回，而右表 “Orders” 中只有符合连接条件的行被返回。由于 “David” 在 “Orders” 表中没有匹配的订单，所以对应的 “OrderID” 列显示为 NULL。</p>
+<p>现在，让我们使用右联接（RIGHT JOIN）的示例查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> Customers.CustomerName, Orders.OrderID<br><span class="hljs-keyword">FROM</span> Customers<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> Orders <span class="hljs-keyword">ON</span> Customers.CustomerID <span class="hljs-operator">=</span> Orders.CustomerID;<br></code></pre></td></tr></table></figure>
+
+<p>执行上述查询语句后，将返回以下结果：</p>
+<table>
+<thead>
+<tr>
+<th>CustomerName</th>
+<th>OrderID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>John</td>
+<td>101</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>102</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>103</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>104</td>
+</tr>
+</tbody></table>
 
                 
               </div>
